@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Page Replacement Algorithm Comparison</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script><link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="topbar"><div class="brand"><i data-lucide="memory-stick"></i><span>OS Lab</span></div><nav><a href="../index.html"><i data-lucide="layout-grid"></i> Projects</a><button id="themeBtn"><i data-lucide="moon"></i></button></nav></header>
+<main>
+<section class="hero"><div class="eyebrow">PROJECT 14 · MEMORY MANAGEMENT</div><h1>Page Replacement Algorithm Comparison</h1><p>Compare FIFO, LRU and Optimal page replacement algorithms on the same reference string and number of frames.</p><div class="formula"><strong>Goal:</strong> Compare page faults, hits and fault rates to understand algorithm performance.</div></section>
+<section class="panel">
+<div class="section-head"><div><span class="kicker">INPUT</span><h2>Simulation Settings</h2></div><div class="actions"><button class="btn secondary" id="exampleBtn"><i data-lucide="wand-2"></i> Load Example</button><button class="btn ghost" id="resetBtn"><i data-lucide="rotate-ccw"></i> Reset</button></div></div>
+<div class="input-grid"><label>Page Reference String<input id="referenceInput" value="7,0,1,2,0,3,0,4,2,3,0,3,2"></label><label>Number of Frames<input id="framesInput" type="number" min="1" max="10" value="3"></label></div>
+<button class="btn primary" id="runBtn"><i data-lucide="play"></i> Compare Algorithms</button><p class="hint">All three algorithms use exactly the same reference string and frame count.</p>
+</section>
+<section class="stats" id="stats"></section>
+<section class="panel"><div class="section-head"><div><span class="kicker">COMPARISON</span><h2>Performance Summary</h2></div><div id="status" class="status">Run a comparison to view results.</div></div><div class="table-wrap" id="summary"><div class="empty-state"><i data-lucide="bar-chart-3"></i><p>Comparison results will appear here.</p></div></div></section>
+<section class="panel"><div class="section-head"><div><span class="kicker">VISUALIZATION</span><h2>Frame-by-Frame Comparison</h2></div></div><div class="table-wrap" id="steps"><div class="empty-state"><i data-lucide="layers-3"></i><p>Run the comparison to view every page replacement step.</p></div></div></section>
+<section class="info-grid">
+<article class="info-card"><i data-lucide="graduation-cap"></i><h3>Algorithms Compared</h3><ul><li><b>FIFO:</b> Replaces the page that entered memory first.</li><li><b>LRU:</b> Replaces the page that has not been used for the longest time.</li><li><b>Optimal:</b> Replaces the page whose next use is farthest in the future.</li></ul></article>
+<article class="info-card"><i data-lucide="lightbulb"></i><h3>Key Observation</h3><p>Optimal provides the theoretical minimum number of page faults. FIFO and LRU can be compared against it to understand how closely practical strategies perform.</p></article>
+</section>
+</main><footer>Operating Systems · TYBSc Computer Science · Page Replacement Comparison</footer>
+<script src="js/app.js"></script><script>lucide.createIcons();</script>
+</body></html>
